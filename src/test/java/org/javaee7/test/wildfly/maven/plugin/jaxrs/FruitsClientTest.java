@@ -13,7 +13,7 @@ import javax.ws.rs.core.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FruitsClient {
+public class FruitsClientTest {
 
 	private String base="http://127.0.0.1:9990/WildflyMavenPlugin-0.0.1-SNAPSHOT.jar/webresources/fruit";
 	private static WebTarget target;
