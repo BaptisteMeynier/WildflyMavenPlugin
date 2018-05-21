@@ -18,6 +18,7 @@
 
 
 	<build>
+		<defaultGoal>clean post-integration-test</defaultGoal>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -50,8 +51,8 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!-- filename>mon_jar.jar</filename-->
-					<version>${version.org.wildfly}</version> 
+					<!-- filename>mon_jar.jar</filename -->
+					<version>${version.org.wildfly}</version>
 					<force>true</force>
 					<before-deployment>
 						<commands>
@@ -73,6 +74,12 @@
 			<artifactId>javaee-api</artifactId>
 			<version>${version.j2ee}</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
