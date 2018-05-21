@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.javaee7.test</groupId>
+	<artifactId>WildflyMavenPlugin</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<version.j2ee>7.0</version.j2ee>
+		<version.wildfly.plugin>1.2.1.Final</version.wildfly.plugin>
+		<version.org.jboss.arquillian>1.4.0.Final</version.org.jboss.arquillian>
+		<version.org.wildfly>8.2.1.Final</version.org.wildfly>
+		<version.junit>4.12</version.junit>
+	</properties>
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.wildfly.plugins</groupId>
+					<artifactId>wildfly-maven-plugin</artifactId>
+					<version>${version.wildfly.plugin}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>start-wildfly</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>start</goal>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>stop-wildfly</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>shutdown</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- filename>mon_jar.jar</filename-->
+					<version>${version.org.wildfly}</version> 
+					<force>true</force>
+					<before-deployment>
+						<commands>
+							<command>/system-property=server.name:add(value="wildfly")</command>
+							<command>/subsystem=remoting/http-connector=http-remoting-connector/:undefine-attribute(name=security-realm)</command>
+						</commands>
+					</before-deployment>
+					<java-opts>
+						<java-opt>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</java-opt>
+					</java-opts>
+				</configuration>
+
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${version.j2ee}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>
