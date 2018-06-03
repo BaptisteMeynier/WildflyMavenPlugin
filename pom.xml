@@ -4,6 +4,7 @@
 	<groupId>org.javaee7.test</groupId>
 	<artifactId>WildflyMavenPlugin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,6 +16,7 @@
 		<version.org.jboss.arquillian>1.4.0.Final</version.org.jboss.arquillian>
 		<version.org.wildfly>8.2.1.Final</version.org.wildfly>
 		<version.junit>4.12</version.junit>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
 
 

@@ -11,14 +11,14 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.experimental.categories.Category;
 
 
 public class FruitsClientIT {
 
-	private String base="http://127.0.0.1:9990/WildflyMavenPlugin-0.0.1-SNAPSHOT.jar/webresources/fruit";
+	//private String base="http://127.0.0.1:8080/WildflyMavenPlugin-0.0.1-SNAPSHOT.jar/webresources/fruit";
+	private String base="http://127.0.0.1:8080/WildflyMavenPlugin-0.0.1-SNAPSHOT.jar/webresources/fruit";
+//	private String base="http://127.0.0.1:8080/webresources/fruit";
 	private static WebTarget target;
 
 	@Test
@@ -27,8 +27,14 @@ public class FruitsClientIT {
 		Client client = ClientBuilder.newClient();
 		target = client.target(URI.create(new URL(base).toExternalForm()));
 		target.request().post(Entity.json(aFruit));
+		
+		
 		Response response = target.request().get();
-		Assert.assertTrue(response.readEntity(String.class).contains(aFruit));
+		String fruits=response.readEntity(String.class);
+		Assert.assertTrue("Ananas".contains("Ananas"));
+		System.out.println("1"+fruits);
+		System.out.println("2"+aFruit);
+		Assert.assertTrue(fruits.contains(aFruit));
 	}
 
 }

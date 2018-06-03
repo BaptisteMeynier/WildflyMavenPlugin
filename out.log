@@ -1,0 +1,160 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building WildflyMavenPlugin 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ WildflyMavenPlugin ---
+[INFO] Deleting /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ WildflyMavenPlugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ WildflyMavenPlugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ WildflyMavenPlugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ WildflyMavenPlugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ WildflyMavenPlugin ---
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ WildflyMavenPlugin ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [WildflyMavenPlugin] in [/home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/WildflyMavenPlugin-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [44 msecs]
+[INFO] Building war: /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/WildflyMavenPlugin-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- wildfly-maven-plugin:1.2.1.Final:start (start-wildfly) @ WildflyMavenPlugin ---
+[INFO] JAVA_HOME=/home/baptiste/Resources/Jdk/jdk1.8.0_152/jre
+[INFO] JBOSS_HOME=/home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/wildfly-run/wildfly-8.2.1.Final
+
+[INFO] STANDALONE server is starting up.
+Listening for transport dt_socket at address: 5005
+[0m20:08:30,940 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+[0m[0m20:08:31,052 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+[0m[0m20:08:31,096 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: WildFly 8.2.1.Final "Tweek" starting
+[0m[0m20:08:31,900 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m20:08:31,915 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.3.0.Final
+[0m[0m20:08:31,923 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.3.0.Final
+[0m[0m20:08:31,990 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+[0m[0m20:08:31,998 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m[0m20:08:32,004 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 4.0.7.Final
+[0m[0m20:08:32,005 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+[0m[0m20:08:32,050 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+[0m[0m20:08:32,050 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+[0m[0m20:08:32,062 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+[0m[33m20:08:32,058 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m[0m20:08:32,080 INFO  [org.jboss.as.security] (MSC service thread 1-3) JBAS013170: Current PicketBox version=4.0.21.Final
+[0m[0m20:08:32,084 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) JBAS017502: Undertow 1.1.8.Final starting
+[0m[0m20:08:32,084 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.8.Final starting
+[0m[0m20:08:32,103 INFO  [org.jboss.as.naming] (MSC service thread 1-8) JBAS011802: Starting Naming Service
+[0m[0m20:08:32,104 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m20:08:32,115 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-8) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+[0m[0m20:08:32,138 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+[0m[0m20:08:32,146 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010417: Started Driver service with driver-name = h2
+[0m[0m20:08:32,411 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/wildfly-run/wildfly-8.2.1.Final/welcome-content
+[0m[0m20:08:32,433 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017525: Started server default-server.
+[0m[0m20:08:32,441 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017531: Host default-host starting
+[0m[0m20:08:32,544 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017519: Undertow HTTP listener default listening on /127.0.0.1:8080
+[0m[0m20:08:32,613 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/wildfly-run/wildfly-8.2.1.Final/standalone/deployments
+[0m[0m20:08:32,650 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m20:08:32,883 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+[0m[0m20:08:32,971 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m20:08:32,971 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m20:08:32,971 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.1.Final "Tweek" started in 2240ms - Started 184 of 234 services (82 services are lazy, passive or on-demand)
+[0m[INFO] 
+[INFO] >>> wildfly-maven-plugin:1.2.1.Final:deploy (start-wildfly) > package @ WildflyMavenPlugin >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ WildflyMavenPlugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ WildflyMavenPlugin ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ WildflyMavenPlugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ WildflyMavenPlugin ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ WildflyMavenPlugin ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ WildflyMavenPlugin ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [WildflyMavenPlugin] in [/home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/WildflyMavenPlugin-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [6 msecs]
+[INFO] Building war: /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/WildflyMavenPlugin-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] <<< wildfly-maven-plugin:1.2.1.Final:deploy (start-wildfly) < package @ WildflyMavenPlugin <<<
+[INFO] 
+[INFO] 
+[INFO] --- wildfly-maven-plugin:1.2.1.Final:deploy (start-wildfly) @ WildflyMavenPlugin ---
+Warning! The CLI is running in a non-modular environment and cannot load commands from management extensions.
+{"outcome" => "success"}
+{
+    "outcome" => "success",
+    "response-headers" => {
+        "operation-requires-reload" => true,
+        "process-state" => "reload-required"
+    }
+}
+[0m20:08:34,006 INFO  [org.jboss.as.repository] (management-handler-thread - 4) JBAS014900: Content added at location /home/baptiste/eclipse-workspace/WildflyMavenPlugin/target/wildfly-run/wildfly-8.2.1.Final/standalone/data/content/48/58b7b0b86eda7756f14bf2627d3cc5dc100f7b/content
+[0m[0m20:08:34,018 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Starting deployment of "WildflyMavenPlugin-0.0.1-SNAPSHOT.war" (runtime-name: "WildflyMavenPlugin-0.0.1-SNAPSHOT.war")
+[0m[33m20:08:34,371 WARN  [org.jboss.weld.deployer] (MSC service thread 1-5) JBAS016012: Deployment deployment "WildflyMavenPlugin-0.0.1-SNAPSHOT.war" contains CDI annotations but no bean archive was found (no beans.xml or class with bean defining annotations).
+[0m[0m20:08:34,722 INFO  [org.jboss.resteasy.spi.ResteasyDeployment] (MSC service thread 1-6) Deploying javax.ws.rs.core.Application: class org.javaee7.test.wildfly.maven.plugin.jaxrs.MyApplication
+[0m[0m20:08:34,759 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-6) HV000001: Hibernate Validator 5.1.3.Final
+[0m[0m20:08:34,798 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) JBAS017534: Registered web context: /WildflyMavenPlugin-0.0.1-SNAPSHOT
+[0m[0m20:08:34,816 INFO  [org.jboss.as.server] (management-handler-thread - 4) JBAS018559: Deployed "WildflyMavenPlugin-0.0.1-SNAPSHOT.war" (runtime-name : "WildflyMavenPlugin-0.0.1-SNAPSHOT.war")
+[0m[INFO] 
+[INFO] --- maven-failsafe-plugin:2.21.0:integration-test (run-integration-test) @ WildflyMavenPlugin ---
+[31m20:08:34,824 ERROR [org.jboss.remoting.remote.connection] (XNIO-1 I/O-1) JBREM000200: Remote connection failed: java.io.IOException: Connection reset by peer
+[0m[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.javaee7.test.wildfly.maven.plugin.jaxrs.integration.FruitsClientIT
+1<html><head><title>Error</title></head><body>404 - Not Found</body></html>
+2Banana
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.336 s <<< FAILURE! - in org.javaee7.test.wildfly.maven.plugin.jaxrs.integration.FruitsClientIT
+[ERROR] shouldContactWebservice(org.javaee7.test.wildfly.maven.plugin.jaxrs.integration.FruitsClientIT)  Time elapsed: 0.302 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.javaee7.test.wildfly.maven.plugin.jaxrs.integration.FruitsClientIT.shouldContactWebservice(FruitsClientIT.java:37)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   FruitsClientIT.shouldContactWebservice:37
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- wildfly-maven-plugin:1.2.1.Final:shutdown (stop-wildfly) @ WildflyMavenPlugin ---
+[0m20:08:35,960 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) JBAS017535: Unregistered web context: /WildflyMavenPlugin-0.0.1-SNAPSHOT
+[0m[0m20:08:35,972 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017532: Host default-host stopping
+[0m[0m20:08:35,973 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+[0m[0m20:08:35,975 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) JBAS010418: Stopped Driver service with driver-name = h2
+[0m[0m20:08:35,977 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017521: Undertow HTTP listener default suspending
+[0m[0m20:08:35,977 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017520: Undertow HTTP listener default stopped, was bound to /127.0.0.1:8080
+[0m[0m20:08:35,978 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017506: Undertow 1.1.8.Final stopping
+[0m[0m20:08:36,121 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Stopped deployment WildflyMavenPlugin-0.0.1-SNAPSHOT.war (runtime-name: WildflyMavenPlugin-0.0.1-SNAPSHOT.war) in 170ms
+[0m[0m20:08:36,132 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015950: WildFly 8.2.1.Final "Tweek" stopped in 164ms
+[0m[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.669 s
+[INFO] Finished at: 2018-06-03T20:08:36+02:00
+[INFO] Final Memory: 34M/458M
+[INFO] ------------------------------------------------------------------------
