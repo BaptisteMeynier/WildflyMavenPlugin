@@ -1,4 +1,4 @@
-package org.javaee7.test.wildfly.maven.plugin.jaxrs;
+package org.javaee7.test.wildfly.maven.plugin.jaxrs.integration;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -11,9 +11,12 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
-public class FruitsClientTest {
+
+public class FruitsClientIT {
 
 	private String base="http://127.0.0.1:9990/WildflyMavenPlugin-0.0.1-SNAPSHOT.jar/webresources/fruit";
 	private static WebTarget target;
