@@ -16,9 +16,8 @@ import org.junit.Test;
 
 public class FruitsClientIT {
 
-	//private String base="http://127.0.0.1:8080/WildflyMavenPlugin-0.0.1-SNAPSHOT.jar/webresources/fruit";
-	private String base="http://127.0.0.1:8080/WildflyMavenPlugin-0.0.1-SNAPSHOT.jar/webresources/fruit";
-//	private String base="http://127.0.0.1:8080/webresources/fruit";
+	private String base="http://127.0.0.1:8080/WildflyMavenPlugin-0.0.1-SNAPSHOT/webresources/fruit";
+
 	private static WebTarget target;
 
 	@Test
@@ -31,9 +30,6 @@ public class FruitsClientIT {
 		
 		Response response = target.request().get();
 		String fruits=response.readEntity(String.class);
-		Assert.assertTrue("Ananas".contains("Ananas"));
-		System.out.println("1"+fruits);
-		System.out.println("2"+aFruit);
 		Assert.assertTrue(fruits.contains(aFruit));
 	}
 
